@@ -33,4 +33,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildSystemFingerprint=google/generic_system_google/generic:17/CP3A.261005.002.A1/16269273:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
+# Evolution X puts AppDataBackup in /system, which generic_system.mk's artifact-path
+# rules forbid for device makefiles (its skip-on-Pixel check reads
+# PRODUCT_MANUFACTURER, which inherited product makefiles never see). Allow it, as
+# LineageOS does for its own /system additions.
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/etc/permissions/privapp-permissions-appbackup.xml \
+    system/priv-app/AppDataBackup/%
+
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
