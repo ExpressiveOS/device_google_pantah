@@ -80,3 +80,7 @@ DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
 PRODUCT_PACKAGES += \
     SCONE-v77459 \
     Tycho
+
+# NFC on after a clean flash, as stock
+PRODUCT_PACKAGES += \
+    NfcOverlayCheetah
