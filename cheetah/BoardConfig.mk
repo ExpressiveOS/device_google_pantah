@@ -22,3 +22,10 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
 include $(DEVICE_PATH)/BoardConfigCommon.mk
 
 include $(VENDOR_PATH)/BoardConfigVendor.mk
+
+# Keep app odex on /system rather than system_other. Only a factory flash
+# writes system_other to the inactive slot; zip and OTA installs never do, so
+# SystemUIGoogle, SettingsGoogle and the other preopted priv-apps lose their
+# AOT code after every update and run interpreted/JIT until background
+# dexopt catches up (~180 MB, well inside super).
+BOARD_USES_SYSTEM_OTHER_ODEX :=
