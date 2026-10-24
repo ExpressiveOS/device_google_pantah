@@ -88,3 +88,12 @@ PRODUCT_PACKAGES += \
 # Keep Google Play services from preparing Google's OTAs (sysconfig/disable-google-ota.xml).
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/sysconfig/disable-google-ota.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/disable-google-ota.xml
+
+# Values stock cheetah (CP3A.261005.002.A1) sets that our build left at the AOSP default
+PRODUCT_PACKAGES += \
+    ConnectivityOverlayStockCheetah \
+    FrameworkResOverlayStockCheetah \
+    MediaProviderOverlayStockCheetah \
+    SettingsOverlayStockCheetah \
+    SystemUIOverlayStockCheetah \
+    WifiOverlayStockCheetah

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.settings.overlay.stock.cheetah">
+    <!-- Values stock cheetah (CP3A.261005.002.A1) sets and our build didn't; priority 1, above the tree's own overlays. -->
+    <overlay
+        android:isStatic="true"
+        android:priority="1"
+        android:targetPackage="com.android.settings" />
+</manifest>
