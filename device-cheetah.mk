@@ -72,3 +72,11 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/manifest.xml
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/vintf/device_framework_matrix_product.xml
+
+# Adaptive Connectivity Services (SCONE) and Google Fi (Tycho): vendor/gms
+# defines both, but gms_full.mk's PRODUCT_MANUFACTURER filter doesn't match
+# inside inherit-product, so neither was installed. SCONE's privileged
+# permission allowlist already ships (privapp-permissions-google-p*.xml).
+PRODUCT_PACKAGES += \
+    SCONE-v77459 \
+    Tycho
