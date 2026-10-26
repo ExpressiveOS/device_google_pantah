@@ -37,7 +37,8 @@ PRODUCT_PACKAGES += \
     SystemUIGoogleOverlayVendorCheetah
 
 PRODUCT_PACKAGES += \
-    ApertureOverlayCheetah
+    ApertureOverlayCheetah \
+    UpdaterOverlayCheetah
 
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
