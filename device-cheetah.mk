@@ -97,3 +97,10 @@ PRODUCT_PACKAGES += \
     SettingsOverlayStockCheetah \
     SystemUIOverlayStockCheetah \
     WifiOverlayStockCheetah
+
+# KernelSU Next manager, byte for byte as upstream signed it, with its arm64 libs
+# (vendor/extra/ksu, which ExpressiveOS's expressiveos-cheetah/ksu/apply-ksu.sh
+# stages). A normal, unprivileged app: no app gets root until the user grants it
+# there.
+PRODUCT_PACKAGES += \
+    KernelSUNext
