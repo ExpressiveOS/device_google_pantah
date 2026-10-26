@@ -22,6 +22,11 @@ PRODUCT_SYSTEM_NAME := generic_system_google
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120
 TARGET_SCREEN_WIDTH := 1440
+# Only ExpressiveOS's own animation (vendor/extra/bootanimation), not Evolution X's
+# other styles (about 190 MiB in /product/media). Product config reads this file
+# before the ones it inherits, so this wins over vendor/lineage's common.mk default
+# (?= true) for every build of this tree.
+TARGET_INCLUDE_BOOT_ANIMATIONS := false
 
 # Custom flags
 TARGET_HAS_UDFPS := true
