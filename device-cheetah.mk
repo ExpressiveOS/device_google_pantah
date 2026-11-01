@@ -101,6 +101,10 @@ PRODUCT_PACKAGES += \
 # KernelSU Next manager, byte for byte as upstream signed it, with its arm64 libs
 # (vendor/extra/ksu, which ExpressiveOS's expressiveos-cheetah/ksu/apply-ksu.sh
 # stages). A normal, unprivileged app: no app gets root until the user grants it
-# there.
+# there. Only with a KernelSU Next init_boot (CHEETAH_KSU_INIT_BOOT, set by the
+# kit when devices/cheetah.conf has EOS_KSU=lkm): ExpressiveOS ships unrooted, and
+# root is the user's choice.
+ifneq ($(CHEETAH_KSU_INIT_BOOT),)
 PRODUCT_PACKAGES += \
     KernelSUNext
+endif
