@@ -5,7 +5,8 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.nfc.overlay.cheetah">
-    <!-- Priority 1: above LineageOS's NfcOverlay (priority 0), which turns NFC off by default. -->
+    <!-- Priority 1: above vendor/lineage's ExpressiveOSNfcOverlay (priority 0), which turns
+         NFC off by default. -->
     <overlay
         android:isStatic="true"
         android:priority="1"
