@@ -4,8 +4,8 @@
     SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.evolution.updater.overlay.cheetah">
+    package="org.expressiveos.updater.overlay.cheetah">
     <overlay
         android:isStatic="true"
-        android:targetPackage="org.evolution.updater" />
+        android:targetPackage="org.expressiveos.updater" />
 </manifest>
