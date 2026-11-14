@@ -33,3 +33,12 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
 
 # WiFi
 include $(DEVICE_PATH)/wifi/BoardConfig-wifi.mk
+
+# Wild Kernels (ExpressiveOS: root out of the box, Daryl 2026-11-14): expressiveos-cheetah/
+# tools/eos-make.sh builds boot-wild.img (ksu/tools/wild-boot.sh: this boot image with Wild
+# Kernels' BakaSU kernel for the phone's KMI) and sets EOS_WILD_BOOT to it, so the images
+# and the OTA ship it, signed with the boot AVB key like any prebuilt boot. Without the
+# variable nothing changes. Last in the file, after everything that sets the boot image.
+ifneq ($(EOS_WILD_BOOT),)
+BOARD_PREBUILT_BOOTIMAGE := $(EOS_WILD_BOOT)
+endif
