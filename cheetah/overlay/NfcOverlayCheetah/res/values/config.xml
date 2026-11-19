@@ -4,7 +4,7 @@
     SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <!-- Stock Pixels and AOSP turn NFC on after a clean flash; vendor/lineage's
+    <!-- Stock Pixels and AOSP turn NFC on after a clean flash; vendor/expressiveos's
          ExpressiveOSNfcOverlay turns it off, so tap-to-pay didn't work until the user
          found the toggle. -->
     <bool name="enable_nfc_default">true</bool>

@@ -1,15 +1,8 @@
 #
 # SPDX-FileCopyrightText: 2021 The Android Open-Source Project
-# SPDX-FileCopyrightText: The LineageOS Project
-# SPDX-FileCopyrightText: The Calyx Institute
+# SPDX-FileCopyrightText: 2026 The ExpressiveOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
-
-# Kernel
-TARGET_LINUX_KERNEL_VERSION := 6.1
-TARGET_KERNEL_DEVICE := pantah
-TARGET_KERNEL_DIR := device/google/$(TARGET_KERNEL_DEVICE)-kernels/$(TARGET_LINUX_KERNEL_VERSION)
-TARGET_KERNEL_PLATFORM_SOURCE := google/gs-$(TARGET_LINUX_KERNEL_VERSION)
 
 # Inherit from gs201
 include device/google/gs201/common.mk
@@ -37,11 +30,10 @@ PRODUCT_PACKAGES += \
     SystemUIGoogleOverlayVendorCheetah
 
 PRODUCT_PACKAGES += \
-    ApertureOverlayCheetah \
     UpdaterOverlayCheetah
 
 # PowerShare
-include hardware/google/pixel/powershare/device.mk
+include hardware/google/pixel/eos_powershare/device.mk
 
 # Preinstalled packages
 PRODUCT_COPY_FILES += \
@@ -73,10 +65,7 @@ DEVICE_MANIFEST_FILE += \
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/vintf/device_framework_matrix_product.xml
 
-# Adaptive Connectivity Services (SCONE) and Google Fi (Tycho): vendor/gms
-# defines both, but gms_full.mk's PRODUCT_MANUFACTURER filter doesn't match
-# inside inherit-product, so neither was installed. SCONE's privileged
-# permission allowlist already ships (privapp-permissions-google-p*.xml).
+# Adaptive Connectivity Services (SCONE) and Google Fi (Tycho)
 PRODUCT_PACKAGES += \
     SCONE-v77459 \
     Tycho
@@ -97,17 +86,6 @@ PRODUCT_PACKAGES += \
     SettingsOverlayStockCheetah \
     SystemUIOverlayStockCheetah \
     WifiOverlayStockCheetah
-
-# KernelSU Next manager, byte for byte as upstream signed it, with its arm64 libs
-# (vendor/extra/ksu, which ExpressiveOS's expressiveos-cheetah/ksu/apply-ksu.sh
-# stages). A normal, unprivileged app: no app gets root until the user grants it
-# there. Only with a KernelSU Next init_boot (CHEETAH_KSU_INIT_BOOT, set by the
-# kit when devices/cheetah.conf has EOS_KSU=lkm): ExpressiveOS ships unrooted, and
-# root is the user's choice.
-ifneq ($(CHEETAH_KSU_INIT_BOOT),)
-PRODUCT_PACKAGES += \
-    KernelSUNext
-endif
 
 # Wild Kernels' boot (EOS_WILD_BOOT, BoardConfig): its release, 6.x.y-androidNN-Wild, isn't a
 # GKI release string, so the build's kernel VINTF check can't tell its kernel FCM level and

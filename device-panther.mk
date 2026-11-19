@@ -1,15 +1,8 @@
 #
 # SPDX-FileCopyrightText: 2021 The Android Open-Source Project
-# SPDX-FileCopyrightText: The LineageOS Project
-# SPDX-FileCopyrightText: The Calyx Institute
+# SPDX-FileCopyrightText: 2026 The ExpressiveOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
-
-# Kernel
-TARGET_LINUX_KERNEL_VERSION := 6.1
-TARGET_KERNEL_DEVICE := pantah
-TARGET_KERNEL_DIR := device/google/$(TARGET_KERNEL_DEVICE)-kernels/$(TARGET_LINUX_KERNEL_VERSION)
-TARGET_KERNEL_PLATFORM_SOURCE := google/gs-$(TARGET_LINUX_KERNEL_VERSION)
 
 # Inherit from gs201
 include device/google/gs201/common.mk
@@ -26,23 +19,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DMServiceOverlayProductGs201 \
     DMServiceOverlayVendorPanther \
-    FrameworkResOverlayProductPanther \
     FrameworkResOverlayVendorPanther \
-    HbmSVManagerOverlayProductPanther \
     PixelNfcOverlayPanther \
     PixelWifiOverlay2023_midyear_F10 \
+    SettingsGoogleOverlayProductPanther \
     SettingsGooglePantherOverlay \
     SettingsOverlayG03Z5 \
     SettingsOverlayGQML3 \
     SettingsOverlayGVU6C \
-    SettingsOverlayGVU6C_VN \
-    SystemUIGoogleOverlayVendorPanther
-
-PRODUCT_PACKAGES += \
-    ApertureOverlayPanther
+    SfpsOverlayGs201 \
+    SystemUIGoogleOverlayVendorPanther \
+     UDFPSOverlayVendorPanther
 
 # PowerShare
-include hardware/google/pixel/powershare/device.mk
+include hardware/google/pixel/eos_powershare/device.mk
 
 # Preinstalled packages
 PRODUCT_COPY_FILES += \

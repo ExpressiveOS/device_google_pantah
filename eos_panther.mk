@@ -1,11 +1,10 @@
 #
-# SPDX-FileCopyrightText: The LineageOS Project
-# SPDX-FileCopyrightText: The Calyx Institute
+# SPDX-FileCopyrightText: 2026 The ExpressiveOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit ExpressiveOS common configuration
+$(call inherit-product, vendor/expressiveos/config/common.mk)
 
 # Inherit device configuration
 DEVICE_CODENAME := panther
@@ -14,7 +13,7 @@ VENDOR_PATH := vendor/google/panther
 $(call inherit-product, $(DEVICE_PATH)/aosp_$(DEVICE_CODENAME).mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_$(DEVICE_CODENAME)
+PRODUCT_NAME := eos_$(DEVICE_CODENAME)
 PRODUCT_SYSTEM_BRAND := google
 PRODUCT_SYSTEM_MANUFACTURER := Google
 PRODUCT_SYSTEM_NAME := generic_system_google
@@ -32,5 +31,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=google/panther/panther:17/CP3A.261005.002.A1/16269273:user/release-keys \
     BuildSystemFingerprint=google/generic_system_google/generic:17/CP3A.261005.002.A1/16269273:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/app/GoogleExtShared/% \
+    system/app/GooglePrintRecommendationService/% \
+    system/priv-app/DocumentsUIGoogle/% \
+    system/priv-app/GooglePackageInstaller/% \
+    system/priv-app/TagGoogle/%
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
