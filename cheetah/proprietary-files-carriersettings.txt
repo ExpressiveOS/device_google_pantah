@@ -16,6 +16,7 @@ product/etc/CarrierSettings/a1mpn_at.pb
 product/etc/CarrierSettings/agms_us.pb
 product/etc/CarrierSettings/ahamo_jp.pb
 product/etc/CarrierSettings/airbus_de.pb
+product/etc/CarrierSettings/airbus_es.pb
 product/etc/CarrierSettings/airbus_fr.pb
 product/etc/CarrierSettings/airtel_in.pb
 product/etc/CarrierSettings/airtel_lk.pb
@@ -28,6 +29,7 @@ product/etc/CarrierSettings/alkafeel_iq.pb
 product/etc/CarrierSettings/altice_us.pb
 product/etc/CarrierSettings/alticeroaming_us.pb
 product/etc/CarrierSettings/amarisoft_satellite.pb
+product/etc/CarrierSettings/amigo_pt.pb
 product/etc/CarrierSettings/andorratelecom_ad.pb
 product/etc/CarrierSettings/annatel_il.pb
 product/etc/CarrierSettings/antel_uy.pb
@@ -101,6 +103,7 @@ product/etc/CarrierSettings/claro_pe.pb
 product/etc/CarrierSettings/claro_pr.pb
 product/etc/CarrierSettings/cloud9_gb.pb
 product/etc/CarrierSettings/cloudcore_ca.pb
+product/etc/CarrierSettings/cmcc_cn.pb
 product/etc/CarrierSettings/cogeco_ca.pb
 product/etc/CarrierSettings/com4_no.pb
 product/etc/CarrierSettings/comcastbusiness_us.pb
@@ -117,14 +120,18 @@ product/etc/CarrierSettings/correios_br.pb
 product/etc/CarrierSettings/cox_us.pb
 product/etc/CarrierSettings/cricket5g_us.pb
 product/etc/CarrierSettings/cricket_us.pb
+product/etc/CarrierSettings/csl_hk.pb
 product/etc/CarrierSettings/cspire_nl.pb
 product/etc/CarrierSettings/cspire_us.pb
+product/etc/CarrierSettings/ct_cn.pb
 product/etc/CarrierSettings/ct_mo.pb
 product/etc/CarrierSettings/ctm_mo.pb
+product/etc/CarrierSettings/cu_cn.pb
 product/etc/CarrierSettings/cytamobile_cy.pb
 product/etc/CarrierSettings/default.pb
 product/etc/CarrierSettings/defensemobile_us.pb
 product/etc/CarrierSettings/dialog_lk.pb
+product/etc/CarrierSettings/digi_be.pb
 product/etc/CarrierSettings/digi_hu.pb
 product/etc/CarrierSettings/digi_it.pb
 product/etc/CarrierSettings/digi_my.pb
@@ -154,6 +161,7 @@ product/etc/CarrierSettings/enreach_de.pb
 product/etc/CarrierSettings/enreach_nl.pb
 product/etc/CarrierSettings/entel_cl.pb
 product/etc/CarrierSettings/entel_pe.pb
+product/etc/CarrierSettings/epic_cy.pb
 product/etc/CarrierSettings/epic_mt.pb
 product/etc/CarrierSettings/eplus_de.pb
 product/etc/CarrierSettings/erate_no.pb
@@ -173,6 +181,7 @@ product/etc/CarrierSettings/fi_extended_us.pb
 product/etc/CarrierSettings/fi_tmo_us.pb
 product/etc/CarrierSettings/fido_ca.pb
 product/etc/CarrierSettings/finetwork_es.pb
+product/etc/CarrierSettings/firstnet5gsa_us.pb
 product/etc/CarrierSettings/firstnet_us.pb
 product/etc/CarrierSettings/firstnetpacific2_us.pb
 product/etc/CarrierSettings/firstnetpacific_us.pb
@@ -246,6 +255,7 @@ product/etc/CarrierSettings/lebara_gb.pb
 product/etc/CarrierSettings/lebara_nl.pb
 product/etc/CarrierSettings/lebara_sa.pb
 product/etc/CarrierSettings/legos_fr.pb
+product/etc/CarrierSettings/lexvor_us.pb
 product/etc/CarrierSettings/lguplus_kr.pb
 product/etc/CarrierSettings/liberty_pr.pb
 product/etc/CarrierSettings/libertymobile_us.pb
@@ -305,6 +315,7 @@ product/etc/CarrierSettings/mtx_zz.pb
 product/etc/CarrierSettings/mucho_ch.pb
 product/etc/CarrierSettings/mvnoconnect_us.pb
 product/etc/CarrierSettings/naf2_no.pb
+product/etc/CarrierSettings/naf3_no.pb
 product/etc/CarrierSettings/naf_no.pb
 product/etc/CarrierSettings/natcom_ht.pb
 product/etc/CarrierSettings/ncell_np.pb
