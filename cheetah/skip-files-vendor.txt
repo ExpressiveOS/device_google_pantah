@@ -500,6 +500,7 @@ lib64/android.hardware.common-V2-ndk.so
 lib64/android.hardware.common.fmq-V1-ndk.so
 lib64/android.hardware.drm-V1-ndk.so
 lib64/android.hardware.drm-V2-ndk.so
+lib64/android.hardware.drm-V3-ndk.so
 lib64/android.hardware.drm.common-V1-ndk.so
 lib64/android.hardware.gatekeeper-V1-ndk.so
 lib64/android.hardware.health-V4-ndk.so
@@ -515,6 +516,7 @@ lib64/android.hardware.secure_element@1.1.so
 lib64/android.hardware.secure_element@1.2.so
 lib64/android.hardware.security.keymint-V1-ndk.so
 lib64/android.hardware.security.keymint-V4-ndk.so
+lib64/android.hardware.security.keymint-V6-ndk.so
 lib64/android.hardware.security.rkp-V3-ndk.so
 lib64/android.hardware.security.secureclock-V1-ndk.so
 lib64/android.hardware.security.sharedsecret-V1-ndk.so
@@ -536,7 +538,9 @@ lib64/android.hardware.usb.gadget-V1-ndk.so
 lib64/android.hardware.usb.gadget@1.0.so
 lib64/android.hardware.wifi.common-V2-ndk.so
 lib64/android.hardware.wifi.hostapd-V3-ndk.so
+lib64/android.hardware.wifi.hostapd-V4-ndk.so
 lib64/android.hardware.wifi.supplicant-V5-ndk.so
+lib64/android.hardware.wifi.supplicant-V6-ndk.so
 lib64/android.hidl.allocator@1.0.so
 lib64/android.hidl.memory.token@1.0.so
 lib64/android.hidl.memory@1.0.so
@@ -918,6 +922,7 @@ lib64/android.hidl.token@1.0.so
 lib64/com.google.hardware.pixel.display-V4-ndk.so
 lib64/com.google.hardware.pixel.display-V15-ndk.so
 lib64/com.google.hardware.pixel.display-V23-ndk.so
+lib64/com.google.hardware.pixel.display-V24-ndk.so
 lib64/pixel-power-ext-V2-ndk.so
 
 # Misc
