@@ -4,7 +4,7 @@
 #
 
 # Security - must be defined before including BoardConfig-common.mk
-BOOT_SECURITY_PATCH := 2026-10-05
+BOOT_SECURITY_PATCH := 2026-11-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 KERNEL_IMAGES_PATH ?= vendor/google/$(TARGET_BOOTLOADER_BOARD_NAME)-kernel-images
